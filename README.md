@@ -13,7 +13,7 @@
     date = input("this week as 'YYYY-MM-DD': ")
     pre_date= input("previous week as 'YYYY-MM-DD': ")
     
-#DB2 connection with user_id and password 
+    #DB2 connection with user_id and password 
 
 
     connection_str = f""",
@@ -36,7 +36,7 @@
   
     df1= pd.read_sql(sql_command1, db_connection)
 
-#Comparison of institution names in the Inst_code column in two consecutive weeks
+    #Comparison of institution names in the Inst_code column in two consecutive weeks
  
     set(df1.Inst_code).difference(set(df.Inst_code))
   
